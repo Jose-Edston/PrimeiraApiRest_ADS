@@ -24,7 +24,7 @@ class AlunoAPIView(generics.ListCreateAPIView):
 #             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
-class AvaliacaoAPIView(APIView):
+class AvaliacaoAPIView(generics.ListCreateAPIView):
     queryset = Avaliacao.objects.all()
     serializer_class = AvaliacaoSerializer
 
